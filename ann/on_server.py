@@ -57,7 +57,7 @@ cp1 = keras.layers.Conv2D(128, (1,1), activation='linear')(c3)
 p2 = keras.layers.MaxPool2D((4,4))(cp1)
 
 f = keras.layers.Flatten()(p2)
-d = keras.layers.Dropout(0.05)(f)
+d = keras.layers.Dropout(0.1)(f)
 l = fc10 = keras.layers.Dense(3072, activation='relu')(d)
 l = fc20 = keras.layers.Dense(1024, activation='relu')(l)
 l = fc25 = keras.layers.Dense(512, activation='relu')(l)
